@@ -16,17 +16,13 @@
 
  {% else %}
    <div class="reg">
-   <table class="reg_form">
-
-   <form enctype="multipart/form-data" method="post">
-   {% csrf_token %}
-   {{ user_form.as_table }}
-   <tr><td></td><td>
-   <input class="btn" type="submit" name="" value="登録">
-   </td></tr>
-   </form>
-
-   </table>
+     <form enctype="multipart/form-data" method="post">
+       {% csrf_token %}
+       <table class="reg_form">
+       {{ user_form.as_table }}
+       </table>
+       <input class="btn" type="submit" name="" value="登録"> 
+     </form>
    </div>
  {% endif %}
 
